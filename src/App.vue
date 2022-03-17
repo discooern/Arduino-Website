@@ -148,7 +148,7 @@ timer();
         <div class="filter">
           <img
             class="arduinoImg"
-            src="src/assets/Arduino-Picture.png"
+            src="src/assets/Arduino-picture.png"
             alt="Arduino Picture"
           />
         </div>
@@ -235,9 +235,8 @@ timer();
   align-items: center;
 }
 .arduinoImg {
-  transform: rotate(90deg);
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   opacity: 0.85;
 }
 .filter {
@@ -329,13 +328,9 @@ timer();
   .headerLogo {
     height: 80px;
   }
-  .filter {
+  .filter, .arduinoImg {
     width: 280px;
     height: 180px;
-  }
-  .arduinoImg {
-    height: 280px;
-    width: 180px;
   }
   .body {
     width: 100%;
