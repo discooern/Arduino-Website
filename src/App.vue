@@ -5,6 +5,7 @@ let totalVuePackages = ref(null);
 let isTemperatureHigh = ref(false);
 let isHumidityHigh = ref(false);
 let isSoundHigh = ref(false);
+let imgToggle = ref(false);
 let sumTemperature = ref(0);
 let avgTemperature = ref(0);
 let sumHumidity = ref(0);
@@ -61,6 +62,15 @@ async function timer() {
 }
 
 timer();
+
+function imgMeme(){
+  console.log(imgToggle);
+  if(imgToggle.value == false){
+    imgToggle.value = true;
+  } else {
+    imgToggle.value = false;
+  }
+}
 </script>
 
 <template>
@@ -146,9 +156,14 @@ timer();
     <div class="content">
       <div class="picture">
         <div class="filter">
-          <img
+          <img v-if="!imgToggle"
             class="arduinoImg"
             src="src/assets/Arduino-picture.png"
+            alt="Arduino Picture"
+          />
+          <img v-if="imgToggle"
+            class="arduinoImg"
+            src="src\assets\patrickmeme.png"
             alt="Arduino Picture"
           />
         </div>
@@ -187,10 +202,10 @@ timer();
         <h3 class="footerH3">Klement Baastrup Johansen</h3>
         <p class="footerP">Chief of Security Yoga Ball</p>
       </div>
-      <div class="footerContainer">
+      <button class="footerContainer btn" @click="imgMeme">
         <h3 class="footerH3">Patrick Wulff Holst</h3>
         <p class="footerP">Emmissary of Foreign Affairs</p>
-      </div>
+      </button>
     </div>
   </footer>
 </template>
@@ -215,6 +230,8 @@ timer();
 .body {
   align-items: center;
   margin: 80px 200px;
+}
+.btn{
 }
 .display,
 .stat {
