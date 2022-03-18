@@ -235,16 +235,14 @@ timer();
   align-items: center;
 }
 .arduinoImg {
-  width: 400px;
-  height: 300px;
   opacity: 0.85;
 }
-.filter {
+.filter, .arduinoImg {
   display: flex;
   justify-content: center;
   align-items: center;
   background: black;
-  width: 400px;
+  width: 500px;
   height: 300px;
 }
 .arduinoImg,
