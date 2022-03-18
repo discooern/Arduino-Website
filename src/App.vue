@@ -232,6 +232,8 @@ function imgMeme(){
   margin: 80px 200px;
 }
 .btn{
+  background: none;
+  border: none;
 }
 .display,
 .stat {
