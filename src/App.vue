@@ -63,8 +63,8 @@ async function timer() {
 
 timer();
 
-function imgMeme(){
-  if(imgToggle.value == false){
+function imgMeme() {
+  if (imgToggle.value == false) {
     imgToggle.value = true;
   } else {
     imgToggle.value = false;
@@ -155,12 +155,14 @@ function imgMeme(){
     <div class="content">
       <div class="picture">
         <div class="filter">
-          <img v-if="!imgToggle"
+          <img
+            v-if="!imgToggle"
             class="arduinoImg"
             src="src/assets/Arduino-picture.png"
             alt="Arduino Picture"
           />
-          <img v-if="imgToggle"
+          <img
+            v-if="imgToggle"
             class="arduinoImg"
             src="src\assets\patrickmeme.png"
             alt="Arduino Picture"
@@ -197,7 +199,10 @@ function imgMeme(){
         <h3 class="footerH3">Nikolai Frederik Olesen</h3>
         <p class="footerP">Arduino Sound</p>
       </div>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footerContainer btnKlement">
+      <a
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        class="footerContainer btnKlement"
+      >
         <h3 class="footerH3">Klement Baastrup Johansen</h3>
         <p class="footerP">Chief of Security Yoga Ball</p>
       </a>
@@ -230,16 +235,17 @@ function imgMeme(){
   align-items: center;
   margin: 80px 200px;
 }
-.btn{
+.btn {
   background: none;
   border: none;
+  font-size: 16px;
+  padding: 0;
 }
-.btnKlement{
-   text-decoration: none;
-   color: #2c3e50;
-}
-.btn, .btnKlement{
-  cursor:default;
+.btn,
+.btnKlement {
+  text-decoration: none;
+  color: #2c3e50;
+  cursor: default;
 }
 .display,
 .stat {
@@ -262,7 +268,8 @@ function imgMeme(){
 .arduinoImg {
   opacity: 0.85;
 }
-.filter, .arduinoImg {
+.filter,
+.arduinoImg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,7 +358,8 @@ function imgMeme(){
   .headerLogo {
     height: 80px;
   }
-  .filter, .arduinoImg {
+  .filter,
+  .arduinoImg {
     width: 280px;
     height: 180px;
   }
