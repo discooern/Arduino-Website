@@ -64,7 +64,6 @@ async function timer() {
 timer();
 
 function imgMeme(){
-  console.log(imgToggle);
   if(imgToggle.value == false){
     imgToggle.value = true;
   } else {
@@ -198,10 +197,10 @@ function imgMeme(){
         <h3 class="footerH3">Nikolai Frederik Olesen</h3>
         <p class="footerP">Arduino Sound</p>
       </div>
-      <div class="footerContainer">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footerContainer btnKlement">
         <h3 class="footerH3">Klement Baastrup Johansen</h3>
         <p class="footerP">Chief of Security Yoga Ball</p>
-      </div>
+      </a>
       <button class="footerContainer btn" @click="imgMeme">
         <h3 class="footerH3">Patrick Wulff Holst</h3>
         <p class="footerP">Emmissary of Foreign Affairs</p>
@@ -234,6 +233,13 @@ function imgMeme(){
 .btn{
   background: none;
   border: none;
+}
+.btnKlement{
+   text-decoration: none;
+   color: #2c3e50;
+}
+.btn, .btnKlement{
+  cursor:default;
 }
 .display,
 .stat {
